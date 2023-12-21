@@ -1,0 +1,427 @@
+<div class="header-container">
+  <div class="container">
+    <div class="item item1">
+      <h3>The wood that inhances the beauty of your home</h3>
+      <p>Lorem ipsum dolor sit amet sit amet.</p>
+      <button>Buy now</button>
+    </div>
+    <div class="item item2">
+      <img src="./assets/images/smartProduct.jpg" alt="Image" />
+    </div>
+    <div class="item item3">
+      <div class="arrows">
+        <button class="arrow-top">
+          <i class="icon fas fa-arrow-left"></i>
+        </button>
+        <button class="arrow-bottom">
+          <i class="icon fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sections-container">
+  <div class="content-container">
+    <div class="title">
+      <h3>Shop By Categories</h3>
+    </div>
+
+    <div class="category-container">
+      <!-- Repeat the following structure for each of the 10 divs -->
+      <div class="item-cag">
+        <div class="circle">
+          <img src="./assets/images/1.jpg" alt="Placeholder Image 1" />
+        </div>
+        <h5>Item 1</h5>
+      </div>
+
+      <div class="item-cag">
+        <div class="circle">
+          <img src="./assets/images/2.jpg" alt="Placeholder Image 1" />
+        </div>
+        <h5>Item 2</h5>
+      </div>
+
+      <div class="item-cag">
+        <div class="circle">
+          <img src="./assets/images/3.jpg" alt="Placeholder Image 1" />
+        </div>
+        <h5>Item 3</h5>
+      </div>
+
+      <div class="item-cag">
+        <div class="circle">
+          <img src="./assets/images/4.jpg" alt="Placeholder Image 1" />
+        </div>
+        <h5>Item 4</h5>
+      </div>
+      <div class="item-cag">
+        <div class="circle">
+          <img src="./assets/images/5.jpg" alt="Placeholder Image 1" />
+        </div>
+        <h5>Item 5</h5>
+      </div>
+      <div class="item-cag">
+        <div class="circle">
+          <img src="./assets/images/1.jpg" alt="Placeholder Image 1" />
+        </div>
+        <h5>Item 6</h5>
+      </div>
+      <div class="item-cag">
+        <div class="circle">
+          <img src="./assets/images/2.jpg" alt="Placeholder Image 1" />
+        </div>
+        <h5>Item 7</h5>
+      </div>
+      <div class="item-cag">
+        <div class="circle">
+          <img src="./assets/images/3.jpg" alt="Placeholder Image 1" />
+        </div>
+        <h5>Item 8</h5>
+      </div>
+      <div class="item-cag">
+        <div class="circle">
+          <img src="./assets/images/4.jpg" alt="Placeholder Image 1" />
+        </div>
+        <h5>Item 9</h5>
+      </div>
+      <div class="item-cag">
+        <div class="circle">
+          <img src="./assets/images/5.jpg" alt="Placeholder Image 1" />
+        </div>
+        <h5>Item 10</h5>
+      </div>
+    </div>
+
+    <div class="brand-container">
+      <!-- First Div -->
+      <div class="brand-item brand-item1">
+        <div class="image">
+          <img src="../assets/images/headphone.png" alt="Transparent Image 1" />
+        </div>
+        <div class="content">
+          <p>This is a description .</p>
+          <h3>Title 1</h3>
+          <button>Click me</button>
+        </div>
+      </div>
+
+      <!-- Second Div -->
+      <div class="brand-item brand-item2">
+        <div class="image">
+          <img src="../assets/images/airpods.png" alt="Transparent Image 2" />
+        </div>
+        <div class="content">
+          <div class="p">
+            <p>This is a description .</p>
+          </div>
+          <h3>Title 2</h3>
+          <button>Click me</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="Recommended">
+      <div class="Recommended-title">
+        <h3>Recommended For You</h3>
+        <p class="see-all">See all</p>
+      </div>
+    </div>
+    <!-- card -->
+    <div class="cards">
+      <div class="card" *ngFor="let item of allProducts">
+        <div class="card-content" [routerLink]="['/details', item._id]">
+          <img [src]="item.imageCover" alt="Product Image" class="card-image" />
+          <div class="price">{{ item.price }}$</div>
+          <div class="category">{{ item.category.name }}</div>
+          <div class="card-title">{{ item.title }}</div>
+          <!-- <p class="card-description">
+              Lorem adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p> -->
+          <div class="rating">
+            <i class="fas fa-star full"></i>
+            <p>(${{ item.ratingsAverage }})</p>
+          </div>
+        </div>
+        <button (click)="AddToCart()" class="card-button">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="Today">
+      <div class="Recommended-title">
+        <h3>Today's Deals</h3>
+        <p class="see-all">See all</p>
+      </div>
+    </div>
+
+    <div class="container-circle">
+      <div class="rectangle-content">
+        <div class="text-wrapper">
+          <h3>Heading 1</h3>
+          <p>Lorem ipsum</p>
+        </div>
+        <div class="progress-circle">
+          <span>75%</span>
+          <div class="circle-bar">
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-content">
+        <div class="text-wrapper">
+          <h3>Heading 1</h3>
+          <p>Lorem ipsum</p>
+        </div>
+        <div class="progress-circle">
+          <span>75%</span>
+          <div class="circle">
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-content">
+        <div class="text-wrapper">
+          <h3>Heading 1</h3>
+          <p>Lorem ipsum</p>
+        </div>
+        <div class="progress-circle">
+          <span>75%</span>
+          <div class="circle">
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-content">
+        <div class="text-wrapper">
+          <h3>Heading 1</h3>
+          <p>Lorem ipsum</p>
+        </div>
+        <div class="progress-circle">
+          <span>75%</span>
+          <div class="circle">
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <img
+          src="../assets/images/car.jpg"
+          alt="Product Image"
+          class="card-image"
+        />
+        <div class="card-content">
+          <div class="price">55.00$</div>
+          <div class="category">Electronics</div>
+          <div class="card-title">Product Title</div>
+          <p class="card-description">
+            Lorem adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+          <div class="rating">
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full gray"></i>
+            <i class="fas fa-star gray"></i>
+          </div>
+          <button class="card-button">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="../assets/images/car.jpg"
+          alt="Product Image"
+          class="card-image"
+        />
+        <div class="card-content">
+          <div class="price">55.00$</div>
+          <div class="category">Electronics</div>
+          <div class="card-title">Product Title</div>
+          <p class="card-description">
+            Lorem adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+          <div class="rating">
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full gray"></i>
+            <i class="fas fa-star gray"></i>
+          </div>
+          <button class="card-button">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="../assets/images/car.jpg"
+          alt="Product Image"
+          class="card-image"
+        />
+        <div class="card-content">
+          <div class="price">55.00$</div>
+          <div class="category">Electronics</div>
+          <div class="card-title">Product Title</div>
+          <p class="card-description">
+            Lorem adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+          <div class="rating">
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full gray"></i>
+            <i class="fas fa-star gray"></i>
+          </div>
+          <button class="card-button">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="../assets/images/car.jpg"
+          alt="Product Image"
+          class="card-image"
+        />
+        <div class="card-content">
+          <div class="price">55.00$</div>
+          <div class="category">Electronics</div>
+          <div class="card-title">Product Title</div>
+          <p class="card-description">
+            Lorem adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+          <div class="rating">
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full gray"></i>
+            <i class="fas fa-star gray"></i>
+          </div>
+          <button class="card-button">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="../assets/images/car.jpg"
+          alt="Product Image"
+          class="card-image"
+        />
+        <div class="card-content">
+          <div class="price">55.00$</div>
+          <div class="category">Electronics</div>
+          <div class="card-title">Product Title</div>
+          <p class="card-description">
+            Lorem adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+          <div class="rating">
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full gray"></i>
+            <i class="fas fa-star gray"></i>
+          </div>
+          <button class="card-button">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="../assets/images/car.jpg"
+          alt="Product Image"
+          class="card-image"
+        />
+        <div class="card-content">
+          <div class="price">55.00$</div>
+          <div class="category">Electronics</div>
+          <div class="card-title">Product Title</div>
+          <p class="card-description">
+            Lorem adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+          <div class="rating">
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full"></i>
+            <i class="fas fa-star full gray"></i>
+            <i class="fas fa-star gray"></i>
+          </div>
+          <button class="card-button">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="Ad-image">
+      <img src="../assets/images/Adv.png" alt="Ad Image" />
+    </div>
+
+    <div class="brand-container">
+      <!-- First Div -->
+      <div class="brand-item brand-item1">
+        <div class="image">
+          <img src="../assets/images/headphone.png" alt="Transparent Image 1" />
+        </div>
+        <div class="content">
+          <p>This is a description .</p>
+          <h3>Title 1</h3>
+          <button>Click me</button>
+        </div>
+      </div>
+
+      <!-- Second Div -->
+      <div class="brand-item brand-item2">
+        <div class="image">
+          <img src="../assets/images/airpods.png" alt="Transparent Image 2" />
+        </div>
+        <div class="content">
+          <div class="p">
+            <p>This is a description .</p>
+          </div>
+          <h3>Title 2</h3>
+          <button>Click me</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="electronics">
+      <div class="electronics-title">MENS FASHION</div>
+      <div class="image-container">
+        <div class="image-card">
+          <img src="../assets/images/el1.jpeg" alt="Image 1 Title" />
+          <h3>Title</h3>
+        </div>
+        <div class="image-card">
+          <img src="../assets/images/el1.jpeg" alt="Image 1 Title" />
+          <h3>Title</h3>
+        </div>
+        <div class="image-card">
+          <img src="../assets/images/el1.jpeg" alt="Image 1 Title" />
+          <h3>Title</h3>
+        </div>
+        <div class="image-card">
+          <img src="../assets/images/el1.jpeg" alt="Image 1 Title" />
+          <h3>Title</h3>
+        </div>
+        <div class="image-card">
+          <img src="../assets/images/el1.jpeg" alt="Image 1 Title" />
+          <h3>Title</h3>
+        </div>
+        <div class="image-card">
+          <img src="../assets/images/el1.jpeg" alt="Image 1 Title" />
+          <h3>Title</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

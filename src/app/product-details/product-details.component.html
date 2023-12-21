@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="product-container">
+      
+      <div class="product-image">
+        <img [src]="productDetails.imageCover" alt="Product Image" />
+        <div class="thumbnail-container">
+          <div class="thub-brdr">
+            <img src="../../assets/images/el2.jpg"alt="Thumbnail 1" class="opacity-7"/>
+          </div>
+          <div><img src="../../assets/images/el2.jpg" alt="Thumbnail 2" /></div>
+          <div><img src="../../assets/images/el2.jpg" alt="Thumbnail 3" /></div>
+          <div><img src="../../assets/images/el2.jpg" alt="Thumbnail 4" /></div>
+        </div>
+      </div>
+      <div class="product-info">
+        
+        <h3><p class="above-title">SNEAKER COMPANY</p>{{productDetails.title}}</h3>
+        <p>
+          {{productDetails.description}}
+        </p>
+        <!-- <span class="price">$49.99</span> -->
+        <div class="buttons">
+          <div class="quantity-control">
+            <button class="minus">-</button>
+            <input type="number" value="0" min="0" />
+            <button class="plus">+</button>
+          </div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

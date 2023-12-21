@@ -1,0 +1,231 @@
+$main-color: #f09d4f;
+
+.container {
+  width: 80%;
+}
+
+.product-container {
+  display: flex;
+  gap: 4rem;
+  margin-block: 2rem;
+}
+
+.product-image {
+  width: 50%;
+}
+
+.product-image img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-block: 1rem;
+}
+
+.thumbnail-container img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.opacity-7 {
+  opacity: 0.7;
+}
+.thub-brdr {
+  border: $main-color 2px solid;
+  border-radius: 10px;
+}
+/* ***************** */
+.product-info {
+  width: 50%;
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.above-title {
+  font-size: 0.8rem;
+  font-weight: bolder;
+  color: $main-color !important;
+  letter-spacing: 1px;
+}
+.product-info h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-block-end: 1rem;
+}
+.product-info p {
+  //make the text muted
+  color: #6c757d;
+  margin-block-end: 1rem;
+
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 1rem;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.quantity-control {
+  margin-inline-end: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f7f8fd;
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: #f7f8fd;
+    max-width: 100%;
+  }
+  input {
+    width: 50px;
+    border: none;
+    text-align: center;
+    background-color: #f7f8fd;
+    flex-grow: 1;
+  }
+}
+
+.product-info .add-to-cart {
+  cursor: pointer;
+  margin-inline-start: 1rem;
+  display: inline-block;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid $main-color;
+  background-color: #fff;
+  color: $main-color;
+}
+.product-info .add-to-cart:hover {
+  background-color: $main-color;
+  color: #fff;
+}
+
+
+
+
+
+/* Media Query */
+
+@media (max-width: 1024px) {
+  .product-container {
+    flex-direction: column; /* Stack image and info below on narrower screens */
+    gap: 2rem;
+  }
+  .product-image {
+    width: 100%;
+  }
+  .product-info {
+    width: 100%;
+    padding-inline: 2rem;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .quantity-control {
+    margin-inline-end: 0rem;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f7f8fd;
+    button {
+      cursor: pointer;
+      border: none;
+      background-color: #f7f8fd;
+      max-width: 100%;
+    }
+    input {
+      width: 50px ;
+      border: none;
+      text-align: center;
+      background-color: #f7f8fd;
+      flex-grow: 1;
+    }
+  }
+  
+  .product-info .add-to-cart {
+    margin-inline-start: 1rem;
+    margin-block-start: 1rem;
+    display: inline-block;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid $main-color;
+    background-color: #fff;
+    color: $main-color;
+  }
+  .product-info .add-to-cart:hover {
+    background-color: $main-color;
+    color: #fff;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-info h3 {
+    font-size: 1.5rem;
+  }
+  .product-info p {
+    font-size: 0.8rem;
+  }
+  .quantity-control {
+    margin-inline-end: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f7f8fd;
+    button {
+      cursor: pointer;
+      border: none;
+      background-color: #f7f8fd;
+      max-width: 100%;
+    }
+    input {
+      width: 50px ;
+      border: none;
+      text-align: center;
+      background-color: #f7f8fd;
+      flex-grow: 1;
+    }
+  }
+  
+  .product-info .add-to-cart {
+    margin-inline-start: 1rem;
+    display: inline-block;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid $main-color;
+    background-color: #fff;
+    color: $main-color;
+  }
+  .product-info .add-to-cart:hover {
+    background-color: $main-color;
+    color: #fff;
+  }
+  
+  
+}
